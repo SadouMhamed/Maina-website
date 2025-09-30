@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Corporate Theme */
+body {
+  @apply bg-slate-50 text-slate-900;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+/* Corporate Button Styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl hover:scale-105;
+  @apply px-8 py-4;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500/50 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  @apply bg-white text-slate-700 border-2 border-slate-200 hover:bg-slate-50 hover:border-slate-300 shadow-md hover:shadow-lg;
+  @apply px-8 py-4;
+}
+
+.btn-tertiary {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-semibold transition-all duration-300;
+  @apply text-blue-600 hover:text-blue-700 hover:bg-blue-50;
+  @apply px-6 py-3;
+}
+
+/* Corporate Design Elements */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+}
+
+.corporate-gradient {
+  @apply bg-gradient-to-br from-slate-50 via-white to-blue-50;
+}
+
+.glass-effect {
+  @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+}
+
+.corporate-card {
+  @apply bg-white border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.section-bg {
+  @apply bg-gradient-to-br from-slate-50 to-white;
+}
+
+.section-bg-alt {
+  @apply bg-gradient-to-br from-white to-slate-50;
+}
+
+.hero-bg {
+  @apply bg-gradient-to-br from-blue-50 via-white to-slate-50;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Custom animations */
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+/* 3D Perspective for hero cards */
+.perspective-1000 {
+  perspective: 1000px;
+  perspective-origin: center center;
+}
+
+/* Floating animation for cards */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delay-1 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-float-delay-2 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-delay-3 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.animate-float-delay-4 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.animate-float-delay-5 {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+/* Subtle rotation animation for cards */
+@keyframes subtle-rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-subtle-rotate {
+  animation: subtle-rotate 120s linear infinite;
+}
+
+/* Modern Slide Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+/* Corporate Gradients and Effects */
+.corporate-shadow {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.corporate-border {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Responsive Grid Patterns */
+.grid-pattern {
+  background-image: linear-gradient(
+      rgba(148, 163, 184, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Modern Slider Effects */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-content {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Button Animations */
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Slider Navigation Styles */
+.slider-nav-button {
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slider-nav-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress indicators */
+.progress-dot {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.progress-dot:hover {
+  transform: scale(1.2);
+}
+
+/* Dashboard Animation Enhancements */
+.dashboard-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Embla Carousel Styles */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
