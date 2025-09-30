@@ -36,32 +36,32 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black text-white border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+    <footer className="text-white bg-black border-t border-gray-800">
+      <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center mb-4 space-x-2">
               <img
                 src="/mylogo/logoMaina.png"
                 alt="MAINA Logo"
-                className="h-10 w-auto object-contain filter brightness-0 invert"
+                className="object-contain w-auto h-10 filter brightness-0 invert"
                 onError={(e) => {
                   // Fallback to icon if logo fails to load
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "flex";
                 }}
               />
-              <div className="hidden w-8 h-8 bg-blue-600 rounded-lg items-center justify-center">
+              <div className="hidden justify-center items-center w-8 h-8 bg-blue-600 rounded-lg">
                 <Play className="w-5 h-5 text-white" />
               </div>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="mb-6 max-w-md text-gray-400">
               Industrial excellence engineered for Algeria. From fabrication and
               assembly to maintenance and engineering, delivering solutions that
               combine technical mastery, safety, and reliability.
             </p>
-            <div className="text-sm text-gray-400 space-y-1 mb-6">
+            <div className="mb-6 space-y-1 text-sm text-gray-400">
               <p>
                 Cité Ali Amrane 2, N°75, Bordj El Kiffane – Algiers, Algeria
               </p>
@@ -74,7 +74,7 @@ const Footer = () => {
                   key={index}
                   href={link.href}
                   aria-label={link.label}
-                  className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                  className="flex justify-center items-center w-10 h-10 bg-gray-900 rounded-lg transition-colors hover:bg-white hover:text-black"
                 >
                   <link.icon className="w-5 h-5" />
                 </a>
@@ -84,13 +84,13 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
+            <h3 className="mb-4 font-semibold">Services</h3>
             <ul className="space-y-2">
               {links.services.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </a>
@@ -100,13 +100,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="mb-4 font-semibold">Company</h3>
             <ul className="space-y-2">
               {links.company.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </a>
@@ -116,13 +116,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Expertise</h3>
+            <h3 className="mb-4 font-semibold">Expertise</h3>
             <ul className="space-y-2">
               {links.expertise.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </a>
@@ -132,13 +132,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Certifications</h3>
+            <h3 className="mb-4 font-semibold">Certifications</h3>
             <ul className="space-y-2">
               {links.certifications.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </a>
@@ -148,12 +148,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        <div className="flex flex-col justify-between items-center pt-8 mt-12 border-t border-gray-800 md:flex-row">
+          <p className="text-sm text-gray-400">
             © 2024 MAINA Construction & Maintenance. All rights reserved.
           </p>
-          <p className="text-gray-400 text-sm mt-4 md:mt-0">
-            Engineering excellence for Algeria's industrial future
+          <p className="mt-4 text-sm text-gray-400 md:mt-0">
+            Crafted with care by Blossom & Partners
           </p>
         </div>
       </div>

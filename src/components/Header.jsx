@@ -14,11 +14,11 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { name: "Platform", href: "#platform", hasDropdown: true },
-    { name: "Industries", href: "#industries", hasDropdown: true },
-    { name: "Customers", href: "#customers", hasDropdown: true },
-    { name: "Resources", href: "#resources", hasDropdown: true },
-    { name: "Pricing", href: "#pricing", hasDropdown: false },
+    { name: "Home", href: "#home", hasDropdown: true },
+    { name: "About Us", href: "#about", hasDropdown: false },
+    { name: "Services", href: "#services", hasDropdown: true },
+    { name: "Certifications", href: "#certification", hasDropdown: true },
+    { name: "Projects", href: "#project", hasDropdown: false },
   ];
 
   // Handle scroll effect
@@ -105,12 +105,6 @@ const Header = () => {
                     isScrolled ? "text-slate-600" : "text-white/80"
                   }`}
                 />
-              </button>
-
-              {/* CTA Button */}
-              <button className="bg-gradient-to-r from-[#1800ad] to-purple-600 hover:from-[#1800ad]/90 hover:to-purple-600/90 text-white px-6 py-2 rounded-full font-medium flex items-center space-x-2 transition-all shadow-md hover:shadow-lg">
-                <span>Consult an expert</span>
-                <ArrowRight className="w-4 h-4" />
               </button>
 
               {/* Mobile Menu Button */}
